@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
     "format": "eslint --fix 'src/**/*.{ts,tsx}' && prettier --parser typescript --write 'src/**/*.{ts,tsx}'",
-    "lint": "eslint 'src/**/*.{ts,tsx}' && prettier --parser typescript --list-different 'src/**/*.{ts,tsx}'",
+    "lint": "eslint 'src/**/*.{ts,tsx}' && prettier --parser typescript --list-different 'src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": [
