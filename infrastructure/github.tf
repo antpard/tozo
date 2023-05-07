@@ -8,5 +8,5 @@ provider "github" {
 
 resource "github_repository" "tozo" {
   name       = "tozo"
-  visibility = "private"
+  visibility = "public"
 }
