@@ -33,7 +33,7 @@ jobs:
   backend:
     runs-on: ubuntu-latest
 
-    container: python:3.10.1-slim-bullseye
+    container: python:3.11.3-slim-bullseye
 
     services:
       postgres:
@@ -64,6 +64,7 @@ jobs:
 
       - name: Initialize dependencies
         run: |
+          pip install --upgrade pip
           pip install pdm
           pdm install
 
