@@ -11,6 +11,7 @@ dev = [
     "vulture>=2.7",
     "pytest>=7.3.1",
     "pytest-asyncio>=0.21.0",
+    "freezegun>=1.2.2",
 ]
 [project]
 name = "tozo"
@@ -19,7 +20,14 @@ description = "app for learn python & typescript"
 authors = [
     {name = "Antonio Pardo", email = "apardo@spluca.org"},
 ]
-dependencies = []
+dependencies = [
+    "quart>=0.18.4",
+    "quart-auth>=0.8.0",
+    "bcrypt>=4.0.1",
+    "zxcvbn>=4.4.28",
+    "itsdangerous>=2.1.2",
+    "quart-rate-limiter>=0.8.0",
+]
 requires-python = ">=3.11"
 license = {text = "MIT"}
 
@@ -50,5 +58,5 @@ lint-isort = "isort --check --diff src tests"
 lint-mypy = "mypy src/backend tests"
 lint-vulture = "vulture src"
 lint = {composite = ["lint-bandit", "lint-black", "lint-djhtml", "lint-flake8", "lint-isort", "lint-mypy", "lint-vulture"]}
-test = "pytest tests/"
-
+start = {cmd = "quart --app src/backend/run.py run --port 5050", env_file = "development.env"}
+test = {cmd = "pytest tests/", env_file = "testing.env"}

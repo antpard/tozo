@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: tozo
+Version: 0.0.1
+Summary: app for learn python & typescript
+Author-email: Antonio Pardo <apardo@spluca.org>
+License: MIT
+Requires-Python: >=3.11
